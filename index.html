@@ -3,12 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    
 </head>
 <body>
-    <script src="script.js">
+    <div class="Navypannel">
         
-    </script>
+        <ul>
+            <li><i class="fa-solid fa-home"></i> Home </li>
+            <li class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+            <li><i class="fa-solid fa-toolbox"></i> Tools</li>
+            <li><i class="fa-solid fa-bolt"></i> Power Equipment</li>
+            <li><i class="fa-solid fa-cog"></i> Metal Items</li>
+            <li><i class="fa-solid fa-gas-pump"></i> O₂ Tank Refill</li>
+            <li><i class="fa-solid fa-file-invoice"></i> Orders</li>
+            <li><i class="fa-solid fa-users"></i> Customers</li>
+            <li ><i class="fa-solid fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </div>
+
+    <div class="Topbar">
+        <div class="Primary">
+            
+                
+            
+            
+            <div class="header">
+                <div class="Logo">
+                    <img src="icon/db.jpg" alt="Logo" class="db">
+                </div>
+                <div class="header-left">
+                    <h2> Dashboard</h2>
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-bell" id="notification-icon"></i>
+                       <div class="notification-dropdown" id="notification-dropdown">
+                           <div class="notification-header">Notifications</div>
+                            <ul class="notification-list">
+                            <li><i class="fa-solid fa-envelope"></i> New message from John</li>
+                            <li><i class="fa-solid fa-user"></i> Anna followed you</li>
+                            <li><i class="fa-solid fa-exclamation-circle"></i> System update available</li>
+                            </ul>
+                            <div class="notification-footer">View all notifications</div>
+                       </div>
+
+                </div>
+                    
+                <div class="profile">
+                    <img src="icon/hacker.png" alt="Profile" id="profile-img">
+                    <li>Profile <i class="fas fa-caret-down"></i></li>  
+                    <div class="menue">
+                        <ul>
+                            <li>Personal Information</li>
+                            <li>Password and Security</li>
+                            <li>Notification Preferences</li>
+                            <li>Help and Support</li>
+                            <li class="theme-toggle">Theme and Appearance 
+                                <i class="fas fa-chevron-down"></i>
+                                <ul class="theme-options">
+                                    <li data-theme="light">Light Mode <i class="fa-solid fa-sun"></i></li>
+                                    <li data-theme="dark">Dark Mode  <i class="fa-solid fa-moon"></i></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>    
+                </div>
+                </div>
+                <div class="overview-container">
+                    <div class="overview-card">
+                        <p>Total Sales</p>
+                           
+                            <h3>$3,682</h3>
+                           
+                    </div>
+                    <div class="overview-card">
+                        <p>New Orders</p>
+                        <h3>340</h3>
+                        
+                    </div>
+                    <div class="overview-card">
+                        <p>Orders in Progress</p>
+                        <h3>268</h3>
+                                  
+                    </div>
+                    <div class="overview-card">
+                        <p>Costomers</p>
+                        <h3>483</h3>
+                                  
+                    </div>
+                   <div class="Pie">
+                    <p class="Order"> Order summary</p>
+                    <canvas id="myPieChart" width="400" height="400"></canvas>
+                   </div>
+                   <div class="Income">
+                    <canvas id="incomeChart"></canvas>
+                   </div>
+                   
+                   <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonth">&#10094;</button>
+                        <span id="month-year"></span>
+                        <button id="nextMonth">&#10095;</button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day">Sun</div>
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                      
+                    </div>
+                 </div>
+
+                 <div class="Booking">
+                    <div class="B-header">
+                        <p class="B-title">Booking List</p>
+                    </div>
+                    
+                    <canvas id="Booking-01" ></canvas>
+
+                    
+                    
+                    
+                   </div>
+
+                        
+                     
+
+                   </div>
+                   
+                   
+                </div>
+        </div>
+  
+    </div>
+    
+    
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
